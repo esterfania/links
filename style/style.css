@@ -3,14 +3,14 @@ body {
   color: white;
 }
 
-.container__user-info {
+.user-info {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.avatar {
+.user-info__avatar {
   border-radius: 50%;
   width: 6.5rem;
   height: 6.5rem;
@@ -18,7 +18,7 @@ body {
   background-size: cover;
 }
 
-.username {
+.user-info__username {
   line-height: 4rem;
 }
 
@@ -45,7 +45,7 @@ body {
   max-width: 680px;
 }
 
-.link-button {
+.group__button-link {
   display: block;
   position: relative;
   padding: 1rem;
@@ -57,7 +57,7 @@ body {
 }
 
 
-.link-button:hover {
+.group__button-link:hover {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -66,7 +66,7 @@ body {
   transition: ease-in-out 5ms;
 }
 
-.link-button:visited {
+.group__button-link:visited {
   color: white;
   text-decoration: none;
 }
