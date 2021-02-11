@@ -21,6 +21,7 @@ body {
   height: 100%;
   width: 100%;
   max-width: 680px;
+  overflow: hidden;
 }
 
 .user-info {
@@ -41,6 +42,9 @@ body {
 .user-info__username {
   line-height: 4rem;
 }
+.user-info__username h1 {
+  font-size: 1.2rem;
+}
 
 .group__button-link {
   display: block;
@@ -49,20 +53,40 @@ body {
   text-align: center;
   border: 0.1rem solid white;
   margin: 1rem;
-  text-decoration: none;
-  color: white;
 }
 
 .group__button-link:hover {
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(181, 181, 184, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   cursor: pointer;
   transition: ease-in-out 5ms;
 }
 
+.group__button-link,
 .group__button-link:visited {
   color: white;
   text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 0.8rem;
+}
+.footer__link,
+.footer__link:visited {
+  color: #4b4949c9;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.footer__credits::after {
+  content: '\2661';
+  color: red;
+  font-weight: bolder;
 }
