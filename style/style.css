@@ -66,3 +66,7 @@ body {
   transition: ease-in-out 5ms;
 }
 
+.link-button:visited {
+  color: white;
+  text-decoration: none;
+}
