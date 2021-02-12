@@ -4,8 +4,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background: rgb(238, 174, 202);
-  background: radial-gradient( circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100% );
+  background: rgb(253,183,199);
+  background: linear-gradient(356deg, rgba(253,183,199,1) 0%, rgba(107,80,245,1) 100%);
 }
 
 .container__info {
