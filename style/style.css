@@ -1,13 +1,12 @@
 body {
   font-family: sans-serif;
   color: white;
+  display: flex;
   flex-direction: column;
-  position: relative;
-  padding-bottom: 0px;
-  min-height: 100vh;
-  overflow-x: hidden;
-  width: 100%;
-  height: 100%;
+  justify-content: space-evenly;
+  width: 100vw;
+  max-height: 100vh;
+  height: 100vh;
   background: rgb(238, 174, 202);
   background: radial-gradient(
     circle,
@@ -18,14 +17,10 @@ body {
 
 .container__info {
   margin: 0px auto;
-  height: 100%;
-  width: 100%;
+  width: 100vw;
   max-width: 680px;
-  overflow: hidden;
 }
-
 .user-info {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +35,8 @@ body {
 }
 
 .user-info__username {
-  line-height: 4rem;
+  padding-top: 2rem;
+  line-height: 0;
 }
 .user-info__username h1 {
   font-size: 1.2rem;
@@ -72,12 +68,6 @@ body {
 
 .footer {
   text-align: center;
-  padding: 0.5rem;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 0.8rem;
 }
 .footer__link,
 .footer__link:visited {
