@@ -1,11 +1,31 @@
+:root {
+  --white: #f4feff;
+  --primary: rgb(215, 32, 135);
+  --secondary: rgb(223, 206, 104);
+  --gray: rgba(193, 249, 252, 0.12);
+  --red: rgb(231, 12, 12);
+}
 body {
   font-family: sans-serif;
-  color: white;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background: rgb(253,183,199);
-  background: linear-gradient(356deg, rgba(253,183,199,1) 0%, rgba(107,80,245,1) 100%);
+  background-image: repeating-linear-gradient(
+      163deg,
+      var(--gray) 0px,
+      var(--gray) 1px,
+      transparent 1px,
+      transparent 13px
+    ),
+    repeating-linear-gradient(
+      253deg,
+      var(--gray) 0px,
+      var(--gray) 1px,
+      transparent 1px,
+      transparent 13px
+    ),
+    linear-gradient(208deg, var(--primary), var(--secondary));
 }
 
 .container__info {
@@ -14,26 +34,26 @@ body {
   max-width: 680px;
   padding-top: 1rem;
 }
-.user-info {
+.user {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
 }
 
-.user-info__avatar {
+.user__avatar {
   border-radius: 50%;
   width: 6.5rem;
   height: 6.5rem;
-  background-image: url('../assets/avatar.jpg');
+  background-image: url('../assets/img/avatar.jpg');
   background-size: cover;
 }
 
-.user-info__username {
+.user__username {
   padding-top: 2rem;
   line-height: 0;
 }
-.user-info__username h1 {
+.user__username h1 {
   font-size: 1.2rem;
 }
 
@@ -42,13 +62,13 @@ body {
   position: relative;
   padding: 1rem;
   text-align: center;
-  border: 0.1rem solid white;
+  border: 0.1rem solid var(--white);
   margin: 1rem;
 }
 
 .group__button-link:hover {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(181, 181, 184, 0.37);
+  background: var(--gray);
+  box-shadow: 0 8px 32px 0 var(--gray);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   cursor: pointer;
@@ -57,7 +77,7 @@ body {
 
 .group__button-link,
 .group__button-link:visited {
-  color: white;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -66,12 +86,12 @@ body {
 }
 .footer__link,
 .footer__link:visited {
-  color: #4b4949c9;
+  color: var(--white);
   text-decoration: none;
   font-weight: bolder;
 }
 .footer__credits::after {
   content: '\2661';
-  color: red;
+  color: var(--red);
   font-weight: bolder;
 }
