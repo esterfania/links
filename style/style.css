@@ -28,7 +28,7 @@ body {
     linear-gradient(208deg, var(--primary), var(--secondary));
 }
 
-.container__info {
+.container {
   margin: 0px auto;
   width: 100vw;
   max-width: 680px;
@@ -57,7 +57,7 @@ body {
   font-size: 1.2rem;
 }
 
-.group__button-link {
+.group__link {
   display: block;
   position: relative;
   padding: 1rem;
@@ -66,7 +66,7 @@ body {
   margin: 1rem;
 }
 
-.group__button-link:hover {
+.group__link:hover {
   background: var(--gray);
   box-shadow: 0 8px 32px 0 var(--gray);
   backdrop-filter: blur(4px);
@@ -75,8 +75,8 @@ body {
   transition: ease-in-out 5ms;
 }
 
-.group__button-link,
-.group__button-link:visited {
+.group__link,
+.group__link:visited {
   color: var(--white);
   text-decoration: none;
 }
