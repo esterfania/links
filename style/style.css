@@ -5,12 +5,9 @@
   --gray: rgba(193, 249, 252, 0.12);
   --red: rgb(231, 12, 12);
 }
-body {
-  font-family: sans-serif;
+
+.container {
   color: var(--white);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   background-image: repeating-linear-gradient(
       163deg,
       var(--gray) 0px,
@@ -26,22 +23,25 @@ body {
       transparent 13px
     ),
     linear-gradient(208deg, var(--primary), var(--secondary));
-}
+  /* display: grid; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* grid-template-columns: 1fr;
+  grid-template-rows: 30% 60% 10%; */
 
-.container {
-  margin: 0px auto;
-  width: 100vw;
-  max-width: 680px;
-  padding-top: 1rem;
-}
-.user {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-top: 1rem;
 }
 
-.user__avatar {
+.header__avatar {
   border-radius: 50%;
   width: 6.5rem;
   height: 6.5rem;
@@ -49,12 +49,22 @@ body {
   background-size: cover;
 }
 
-.user__username {
-  padding-top: 2rem;
-  line-height: 0;
-}
-.user__username h1 {
+.header__username {
   font-size: 1.2rem;
+  padding-top: 1rem;
+}
+
+.main {
+  margin: 0px auto;
+  width: 100vw;
+  max-width: 680px;
+  padding-top: 1rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .group__link {
@@ -63,7 +73,10 @@ body {
   padding: 1rem;
   text-align: center;
   border: 0.1rem solid var(--white);
-  margin: 1rem;
+  margin: 0 1rem;
+}
+.group__link:not(:last-child) {
+  margin-bottom: 1.1rem;
 }
 
 .group__link:hover {
@@ -72,7 +85,7 @@ body {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   cursor: pointer;
-  transition: ease-in-out 5ms;
+  transition: ease-in-out 0.5s;
 }
 
 .group__link,
@@ -82,7 +95,10 @@ body {
 }
 
 .footer {
+  position: relative;
+  bottom: 0;
   text-align: center;
+  padding: 1rem 0;
 }
 .footer__link,
 .footer__link:visited {
@@ -93,5 +109,7 @@ body {
 .footer__credits::after {
   content: '\2661';
   color: var(--red);
+  font-size: 1.5rem;
   font-weight: bolder;
+  vertical-align: middle;
 }
