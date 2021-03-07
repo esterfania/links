@@ -23,10 +23,7 @@
       transparent 13px
     ),
     linear-gradient(208deg, var(--primary), var(--secondary));
-  /* display: grid; */
   font-family: Arial, Helvetica, sans-serif;
-  /* grid-template-columns: 1fr;
-  grid-template-rows: 30% 60% 10%; */
 
   display: flex;
   flex-direction: column;
@@ -89,9 +86,12 @@
 }
 
 .group__link,
-.group__link:visited {
+.group__link:visited,
+.footer__link,
+.footer__link:visited {
   color: var(--white);
   text-decoration: none;
+  outline-color: var(--secondary);
 }
 
 .footer {
@@ -102,8 +102,6 @@
 }
 .footer__link,
 .footer__link:visited {
-  color: var(--white);
-  text-decoration: none;
   font-weight: bolder;
 }
 .footer__credits::after {
